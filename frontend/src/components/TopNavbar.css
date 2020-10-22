@@ -1,0 +1,33 @@
+/* Navlink background colors */
+a.nav-link:hover {
+    background: rgb(104, 104, 104)
+}
+
+a.nav-link.active {
+    background: rgb(252, 177, 46)
+}
+
+a.nav-link {
+    background: rgb(46, 46, 46);
+}
+
+/* Remove padding, make navbar taller */
+nav.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 60px;
+    background: rgb(46, 46, 46);
+}
+
+/* Relevant descendants scales with height of nav.navbar */
+span.navbar-brand, .navbar-collapse, .navbar-nav {
+    height: 100%;
+}
+
+/* Vertically center items in navbar */
+a.nav-link, 
+span.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

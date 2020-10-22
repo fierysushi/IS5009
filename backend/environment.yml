@@ -1,0 +1,8 @@
+name: IS5009
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - flask
+  - flask-cors
+  - pandas
