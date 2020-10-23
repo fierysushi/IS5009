@@ -30,3 +30,9 @@ If you already have a python environment, simply make sure you have the followin
 In the same folder as `backend\`, run
 
 `python backend.py`
+
+You should see:
+
+![image](demo1.jpg)
+
+This means that the server is up and running successfully.

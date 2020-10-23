@@ -12,7 +12,7 @@ Nodejs is a javascript framework for backend development.
 
 Inside the folder `frontend\`, run on the command line
 
-`node install`
+> `node install`
 
 This will install all the dependencies as listed in `package.json` in the subfolder `node_modules`.
 
@@ -20,6 +20,12 @@ This will install all the dependencies as listed in `package.json` in the subfol
 
 In the project directory, you can run:
 
-`npm start`
+> `npm start`
 
+The website should automatically launch in your browser and you will see:
 
+![homepage](demo.jpg)
+
+If it does not launch automatically, you can also navigate there manually by entering `http://localhost:3000/` in the browser.
+
+> :warning: Make sure the backend is running otherwise the website will not work properly!
