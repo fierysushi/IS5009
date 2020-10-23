@@ -2,9 +2,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Setting up environment
 
-## 1. Install Nodejs (javascript framework)
+## 1. Install Nodejs
 
 https://nodejs.org/en/
+
+Nodejs is a javascript framework for backend development.
 
 ## 2. Install packages
 
