@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Card from 'react-bootstrap/Card';
+import Image from 'react-bootstrap/Image';
 
 import TopNavbar from './components/TopNavbar'
 import DragAndDrop from './components/DragAndDrop'
@@ -100,20 +102,53 @@ class App extends Component {
         }, () => this.onFileUpload())
     }
 
-    handleBack = () => {
-        this.setState({
-            'results': null
-        })
-    }
-
     renderPage() {
         if (this.state['results']) {
+            let formatter = Intl.NumberFormat('en-US', {
+                'style': 'currency',
+                'currency': 'USD'
+            })
             return (
-                <Jumbotron>
-                    <h3>Your calculated cashback is:</h3>
-                    <h1>{this.state['results']['data']}</h1>
-                    <Button variant="primary" onClick={this.handleBack}>Submit again</Button>
-                </Jumbotron>
+                <>
+                    <Row>
+                        <Col>
+                            <Card className='px-4 pt-4 mb-3 mx-auto' style={{ width: '18rem', height: '22rem' }}>
+                                <Card.Img className='rounded' variant="top" src="images/ocbc365.png" rounded={true} />
+                                <Card.Body>
+                                    <Card.Title>OCBC 365</Card.Title>
+                                    <Card.Text>Your calculated cashback is {formatter.format(this.state['results']['data']['ocbc'])}</Card.Text>
+                                    <Button variant="success">Learn more</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+
+                        <Col>
+                            <Card className='px-4 pt-4 mb-3 mx-auto' style={{ width: '18rem', height: '22rem' }}>
+                                <Card.Img className='rounded' variant="top" src="images/citi.png" />
+                                <Card.Body>
+                                    <Card.Title>Citi Cash Back</Card.Title>
+                                    <Card.Text>Your calculated cashback is {formatter.format(this.state['results']['data']['citi'])}</Card.Text>
+                                    <Button variant="success">Learn more</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+
+                        <Col>
+                            <Card className='px-4 pt-4 mb-3 mx-auto' style={{ width: '18rem', height: '22rem' }}>
+                                <Card.Img className='rounded' variant="top" src="images/boc.jpg" roundedCircle={true} />
+                                <Card.Body>
+                                    <Card.Title>Bank of China Family</Card.Title>
+                                    <Card.Text>Your calculated cashback is {formatter.format(this.state['results']['data']['bank of china'])}</Card.Text>
+                                    <Button variant="success">Learn more</Button>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
+
+                    <Row className='p-5 justify-content-center'>
+                        <Button variant="primary" onClick={this.handleUploadAgain}>Upload again</Button>
+                    </Row>
+                </>
             )
         }
         else {
@@ -121,6 +156,12 @@ class App extends Component {
                 <DragAndDrop handleFileUpload={this.handleFileUpload} />
             )
         }
+    }
+
+    handleUploadAgain = () => {
+        this.setState({
+            "results": null,
+        })
     }
 
     render() {
@@ -133,26 +174,6 @@ class App extends Component {
                 <Container className='p-3'>
                     {this.renderPage()}
                 </Container>
-
-                {/* <Container className='p-3'>
-
-                    <DragAndDrop handleFileUpload={this.handleFileUpload} handleClick={this.handleFileUpload}></DragAndDrop>
-
-                    <Row>
-                        <Col>
-
-                            {this.renderFileData()}
-
-                            <Button
-                                variant={this.state['uploadButtonDisabled'] ? "secondary" : "primary"}
-                                onClick={this.onFileUpload}
-                                disabled={this.state['uploadButtonDisabled']}>Upload
-                             </Button>
-                        </Col>
-
-                    </Row>
-
-                </Container> */}
 
             </Container>
         );
