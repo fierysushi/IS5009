@@ -8,9 +8,11 @@ This is a simple frontend-backend setup that demonstrates the main functionaliti
 - file upload
 - results display
 
+![demo_gif](demo.gif)
+
 The backend is built in Flask (python), while the frontend is built with Nodejs (javascript).
 
-![demo_gif](demo.gif)
+Sample data is included as `data.csv`
 
 ## Workflow
 
