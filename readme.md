@@ -24,5 +24,5 @@ Please refer to the individual readme files in `backend` and `frontend` folders 
 
 Both the backend and frontend servers need to be running at the same time.
 
-Please refer to the individual readme files on how to run them.
+Please refer to the individual readme files in `backend` and `frontend` folders on how to run them.
 

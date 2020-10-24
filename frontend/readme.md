@@ -12,9 +12,11 @@ Nodejs is a javascript framework for backend development.
 
 Inside the folder `frontend\`, run on the command line
 
-> `node install`
+> `npm install`
 
-This will install all the dependencies as listed in `package.json` in the subfolder `node_modules`.
+This will install all the package dependencies in the subfolder `node_modules`.
+
+You may see some warnings during the installation about optional dependencies. It is safe to ignore them.
 
 # Starting app
 

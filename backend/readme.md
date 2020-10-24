@@ -8,7 +8,7 @@ https://www.anaconda.com/products/individual
 
 ## 2. Setup conda environment
 
-### Method 1: Install from environment.yml file
+Install from environment.yml file using
 
 > `conda env create -f environment.yml`
 
@@ -17,13 +17,6 @@ A conda environment will bre automatically created with all the required depende
 Activate the environment using
 
 > `activate IS5009`
-
-### Method 2: Setup yourself
-
-If you already have a python environment, simply make sure you have the following libraries installed
-- pandas
-- flask
-- flask-cors
 
 # Starting app
 
